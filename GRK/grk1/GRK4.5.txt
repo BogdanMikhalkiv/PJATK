@@ -1,0 +1,55 @@
+function setup() {
+createCanvas(800,600);
+}
+//noprotect
+function draw() {
+noLoop();
+background(100);
+for(y=0; y<height; y++){
+for(x=0; x<width; x++) {
+  if(y <=450) {
+  set(x, y, color(30,144,255));
+    
+  } else {
+      set(x, y, color(0,128,0));
+    
+
+  }
+
+
+}
+}     
+      for(x=0; x<1000; x++) {
+        var r = random(1, 255);
+        var g = random(1, 255);
+        var b = random(1, 255);
+        var x2 = floor(random(0, 800));
+        var y2 = floor(random(450, 800));
+
+
+        set(x2,y2, color(r,g,b));
+
+      }
+        updatePixels();  
+for(y=0; y<height; y++){
+for(x=0; x<width; x++) {
+  if( (y >= 200 && y <=450) && (x>= 250 && x <=550)) {
+  set(x, y, color(139,69,19));
+    
+  } 
+}
+} 
+  var t = 0;
+  for(y=0; y<height; y++){
+    if (y >= 90 && y <= 200) {
+for(x=400-t; x<=400+t; x++) {
+  
+  set(x, y, color(255,0,0));
+  
+  } 
+t+=2;
+
+}
+} 
+updatePixels();
+}
