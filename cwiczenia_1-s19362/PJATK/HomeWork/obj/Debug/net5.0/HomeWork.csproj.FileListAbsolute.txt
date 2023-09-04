@@ -1,0 +1,15 @@
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/bin/Debug/net5.0/HomeWork.deps.json
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/bin/Debug/net5.0/HomeWork.runtimeconfig.json
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/bin/Debug/net5.0/HomeWork.runtimeconfig.dev.json
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/bin/Debug/net5.0/HomeWork.dll
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/bin/Debug/net5.0/ref/HomeWork.dll
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/bin/Debug/net5.0/HomeWork.pdb
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/obj/Debug/net5.0/HomeWork.csprojAssemblyReference.cache
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/obj/Debug/net5.0/HomeWork.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/obj/Debug/net5.0/HomeWork.AssemblyInfoInputs.cache
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/obj/Debug/net5.0/HomeWork.AssemblyInfo.cs
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/obj/Debug/net5.0/HomeWork.csproj.CoreCompileInputs.cache
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/obj/Debug/net5.0/HomeWork.dll
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/obj/Debug/net5.0/ref/HomeWork.dll
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/obj/Debug/net5.0/HomeWork.pdb
+/Users/bogda/Documents/cwiczenia_1-s19362/PJATK/HomeWork/obj/Debug/net5.0/HomeWork.genruntimeconfig.cache
