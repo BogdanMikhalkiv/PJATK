@@ -1,0 +1,134 @@
+-- Created by Vertabelo (http://vertabelo.com)
+-- Last modification date: 2020-05-13 17:03:07.073
+
+-- tables
+-- Table: Kadry
+CREATE TABLE Kadry (
+    NumerPersonelu integer  NOT NULL,
+    Imie varchar(30)  NOT NULL,
+    Nazwisko varchar(30)  NOT NULL,
+    DataUrodzenia date  NOT NULL,
+    NumerPaszportu varchar(8)  NOT NULL,
+    DataPrzyjeciaDoPracy date  NOT NULL,
+    DataZwolnienia date  NULL,
+    KodStanowiska integer  NOT NULL,
+    KodWyksztalcenie integer  NOT NULL,
+    CONSTRAINT Kadry_pk PRIMARY KEY (NumerPersonelu)
+) ;
+
+-- Table: Premia
+CREATE TABLE Premia (
+    KodPremii integer  NOT NULL,
+    Kwota integer  NOT NULL,
+    Data date  NOT NULL,
+    NumerPersonelu integer  NOT NULL,
+    CONSTRAINT Premia_pk PRIMARY KEY (KodPremii)
+) ;
+
+-- Table: Stanowisko
+CREATE TABLE Stanowisko (
+    KodStanowiska integer  NOT NULL,
+    Nazwa varchar(40)  NOT NULL,
+    Wynagrodzenie integer  NOT NULL,
+    CONSTRAINT Stanowisko_pk PRIMARY KEY (KodStanowiska)
+) ;
+
+-- Table: Wyksztalcenie
+CREATE TABLE Wyksztalcenie (
+    KodWyksztalcenie integer  NOT NULL,
+    Nazwa varchar(100)  NOT NULL,
+    CONSTRAINT Wyksztalcenie_pk PRIMARY KEY (KodWyksztalcenie)
+) ;
+
+-- Table: Wyplata
+CREATE TABLE Wyplata (
+    KodWyplaty integer  NOT NULL,
+    Data date  NOT NULL,
+    KwotaWyplaty integer  NOT NULL,
+    NumerPersonelu integer  NOT NULL,
+    CONSTRAINT Wyplata_pk PRIMARY KEY (KodWyplaty)
+) ;
+
+-- foreign keys
+-- Reference: Kadry_Stanowisko (table: Kadry)
+ALTER TABLE Kadry ADD CONSTRAINT Kadry_Stanowisko
+    FOREIGN KEY (KodStanowiska)
+    REFERENCES Stanowisko (KodStanowiska);
+
+-- Reference: Kadry_Wyksztalcenie (table: Kadry)
+ALTER TABLE Kadry ADD CONSTRAINT Kadry_Wyksztalcenie
+    FOREIGN KEY (KodWyksztalcenie)
+    REFERENCES Wyksztalcenie (KodWyksztalcenie);
+
+-- Reference: Premia_Kadry (table: Premia)
+ALTER TABLE Premia ADD CONSTRAINT Premia_Kadry
+    FOREIGN KEY (NumerPersonelu)
+    REFERENCES Kadry (NumerPersonelu);
+
+-- Reference: Wyplata_Kadry (table: Wyplata)
+ALTER TABLE Wyplata ADD CONSTRAINT Wyplata_Kadry
+    FOREIGN KEY (NumerPersonelu)
+    REFERENCES Kadry (NumerPersonelu);
+
+-- End of file.
+
+
+-------------------------------------------------------------------------------
+
+--Wpisywanie przykładowe dane
+
+--Inserting table Stanowisko
+insert into Stanowisko values (1, 'Dyrektor generalny', 1000);
+insert into Stanowisko values (2, 'Menedżer', 800);
+insert into Stanowisko values (3, 'Księgowy', 400);
+insert into Stanowisko values (4, 'Kierowca', 300);
+insert into Stanowisko values (5, 'Prawnik', 500);
+
+
+
+--Inserting table Wyksztalcenie
+insert into Wyksztalcenie values (1, 'wykształcenie wyższe');
+insert into Wyksztalcenie values (2, 'wykształcenie średnie');
+
+--Inserting table Kadry
+insert into Kadry values (1, 'Bogdan','Mikhalkov', '03-JAN-01', 'g5667h', '03-JUN-20', null, 1, 1);
+insert into Kadry values (2, 'Vladimir','Filatov', '07-JAN-01', 'g5967h', '07-JUN-20', null, 2, 1);
+insert into Kadry values (3, 'Evgenii','Memruk', '29-JUN-01', 'g5f67h', '06-JUN-20', null, 3, 1);
+insert into Kadry values (4, 'Nikolai','Pushkin', '25-DEC-00', 'g5667t', '05-JUN-20', null, 4, 2);
+insert into Kadry values (5, 'Ivan','Smirnov', '12-FEB-01', 'g5607t', '05-JUN-20', null, 5, 1);
+insert into Kadry values (6, 'Yaroslav','Mikhakov', '18-DEC-02', 'g5377t', '06-JUN-20', null, 2, 1);
+insert into Kadry values (7, 'Ivan','Ivanov', '09-FEB-01', 'g1607t', '04-JUN-20', '03-JUL-20', 4, 2);
+insert into Kadry values (8, 'Vladislav','Petrov', '08-MAY-01', 'g1607t', '02-JUN-20', null, 4, 2);
+
+
+
+--Inserting table Wyplata
+insert into Wyplata values (1, '03-JUL-20', 1000, 1);
+insert into Wyplata values (2, '03-JUL-20', 800, 2);
+insert into Wyplata values (3, '03-JUL-20', 400, 3);
+insert into Wyplata values (4, '03-JUL-20', 300, 4);
+insert into Wyplata values (5, '03-JUL-20', 500, 5);
+insert into Wyplata values (6, '03-JUL-20', 800, 6);
+insert into Wyplata values (7, '03-JUL-20', 300, 7);
+insert into Wyplata values (8, '03-JUL-20', 300, 8);
+insert into Wyplata values (9, '03-AUG-20', 1000, 1);
+insert into Wyplata values (10, '03-AUG-20', 800, 2);
+insert into Wyplata values (11, '03-AUG-20', 400, 3);
+insert into Wyplata values (12, '03-AUG-20', 300, 4);
+insert into Wyplata values (13, '03-AUG-20', 500, 5);
+insert into Wyplata values (14, '03-AUG-20', 800, 6);
+insert into Wyplata values (15, '03-AUG-20', 300, 8);
+
+
+
+--Inserting table Premia
+insert into Premia values (1, 200, '03-JUL-20', 1);
+insert into Premia values (2, 80, '03-JUL-20', 3);
+insert into Premia values (3, 100, '03-JUL-20', 5);
+insert into Premia values (4, 60, '03-AUG-20', 4);
+insert into Premia values (5, 160, '03-AUG-20', 2);
+insert into Premia values (6, 160, '03-AUG-20', 6);
+insert into Premia values (7, 160, '03-AUG-20', 8);
+
+
+

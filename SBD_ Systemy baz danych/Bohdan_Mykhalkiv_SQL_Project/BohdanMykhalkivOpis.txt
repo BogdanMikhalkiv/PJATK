@@ -1,0 +1,7 @@
+Obszarem tematycznym w tym przypadku są kadry organizacji. Każda firma dąży do najbardziej efektywnego zarządzania personelem i osiągnięcia wyznaczonych celów. Aby to zrobić, musisz mieć pełną i wiarygodną informację o pracownikach, być w stanie użytkownikom rozwiązywać swoje zadania funkcjonalne.
+Każda organizacja ma Dział kadr. Jest to dział funkcjonalny w strukturze zarządzania organizacją. Jedną z funkcji działu jest prowadzenie bazy pracowników: prowadzenie ewidencji kandydatów na wolne stanowiska, wybór kandydatów do zatrudnienia, sporządzanie dokumentów przy rekrutacji, utrzymywanie obecności wolnych stanowisk i t.d.
+W Bazie Danych powinny być przechowywane informacje:
+* O kadrach: numer karty, nazwisko, imię, data urodzenia, dane paszportowe, wykształcenie, data przyjęcia do pracy, data zwolnienia , Kod stanowiska;
+* Informacje o wypłacie: data, kwota wypłaty, numer personelu;
+* Informacje o stanowiskach: kod stanowiska, tytuł, wynagrodzenie;
+* Informacje o premii: kod dopłaty, wysokość dopłaty, data, numer personelu;
