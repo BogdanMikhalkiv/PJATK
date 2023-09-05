@@ -1,0 +1,14 @@
+1) Adobe Premiere Pro
+Microsoft Windows 10 (64-bit), v1909 or later
+macOS 11.0 (Big Sur) or later
+https://www.adobe.com/pl/products/premiere.html
+2) Lightworks
+Windows 8, Windows 8.1, and Windows 10
+Mac OS X 10.11 or higher
+Linux Supported Debian Distros
+Ubuntu / Lubuntu / Xubuntu 20.04 or higher
+Mint 17 or higher
+https://lwks.com/
+3) Apple Final Cut Pro
+macOS 10.15.6 or later
+https://www.apple.com/final-cut-pro/
